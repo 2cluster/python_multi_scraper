@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+    yahoo_scraper:
+        build: .
+        command: python yahoo_finance/scrape_prices.py
+        volumes:
+            - ${PWD}:/usr/src/app

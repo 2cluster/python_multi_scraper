@@ -1,0 +1,8 @@
+FROM python:3.7
+
+WORKDIR /usr/src/app
+
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir bs4 requests lxml pandas
+
+COPY ./yahoo_finance/scrape_prices.py /usr/src/app
